@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.video-cont{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.action-cont{
+    height: 12rem;
+    width: 8rem;
+    position: absolute;
+    /* background-color: green; */
+    top: 40vh;
+    right: 1vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.76rem;
+    align-items: center;
+    
+}
+.action-cont > * {
+    height: 4rem;
+    width: 4rem;
+    border: 2.5px solid white;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.record-btn {
+    background-color: red;
+    height: 80%;
+    width: 80%;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    
+}
+.capture-btn {
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+}
+.scale-capture{
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes scale-capture{
+    0%{
+        transform: scale(00.8s);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+.timer-cont {
+    position: absolute;
+    bottom: 8rem;
+    left: 1rem;
+    color: greenyellow;
+
+    font-size: 0.8rem;
+}
+.timer{
+    display: none;
+}
+.filter-cont{
+    position: absolute;
+    top: calc((100vh - 16rem)/2);
+    left: 0rem;
+    height: 16rem;
+    width: 6rem;
+    background-color: aqua;
+    z-index: 2;
+}
+
+.filter{
+    height: 4rem;
+    background-image: url(./nature.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+    background-blend-mode: color-burn;
+}
+
+.orange {
+    background-color: #e06e1156;
+}
+.aqua {
+    background-color: #00ffff4b;
+}
+.pink {
+    background-color: #fd5c775e;
+}
+.transparent {
+    background-color: none;
+}
+
+.filter-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-blend-mode: color-burn;
+    z-index: 1;
+}
+.material-icons {
+    color: greenyellow;
+    font-size: 4rem;
+}
+.gallery{
+    position: absolute;
+    right: 3.1rem;
+    top: 10rem;
+    z-index: 2;
+}
+.gallery:hover {
+    cursor: pointer;
+}

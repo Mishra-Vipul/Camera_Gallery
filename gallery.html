@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F2C9E1;
+            min-height: 100vh;
+            width: 100vw;
+            position: absolute;
+        }
+        h1{ 
+            top: -2rem;
+            font-style: oblique;
+            font-size: xxx-large;
+            color: blue;
+            position: fixed;
+            height: 5rem;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F2C9E1;
+            z-index: 3;
+            text-shadow:  0px 8px 10px ;
+
+        }
+        .back {
+            width: 5rem;
+            height: 5rem;
+            background-color: black;
+            position: fixed;
+            color: white;
+            top: 0.7rem;
+            left: 2rem;
+            font-size: larger;
+            border-radius: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+        .back:hover {
+            cursor: pointer;
+        }
+        .gallery-cont{
+            background-color: #F2C9E1;
+            min-height: 100vh;
+            min-width: 100vw;
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            border: 8rem solid #F2C9E1;
+        }
+        .gallery-cont > * {
+            margin: 10px;
+        }
+        .media-cont{
+            height: 15rem;
+            width: 15rem;
+            border:4px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .delete{
+            background-color: red;
+        }
+        .download{
+            background-color: blue;
+            
+        }
+        .action-btn{
+            font-weight: bold;
+            text-decoration: underline;
+            color: white;
+            font-size: large;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            
+        }
+        .media {
+            height: 100%;
+            width: 100%;
+            
+        }
+        .media > *{
+            object-fit: fill;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link rel="shortcut icon" href="#" />
+</head>
+<body>
+    
+    <h1>Gallery</h1>
+    <div class="gallery-cont">
+        
+    <div class="back">Back</div>
+<!--         
+        <div class="media-cont">
+            <div class="media">
+                <video autoplay loop src="./.mp4"></video>
+            </div>
+        <div class="download action-btn">Download</div>
+        <div class="delete action-btn">Delete</div>
+        </div> -->
+    </div> 
+
+    <script>
+        let backBtn = document.querySelector(".back");
+        backBtn.addEventListener("click", (e) => {
+            location.assign("./index.html");
+        })
+    </script>
+    <script src="./db.js"></script>
+    <script src="./gallery.js"></script>
+</body>
+</html>
