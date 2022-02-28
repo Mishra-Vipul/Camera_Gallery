@@ -1,0 +1,19 @@
+{
+  "name": "cam_gallery_application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mishra-Vipul/Camera_Gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mishra-Vipul/Camera_Gallery/issues"
+  },
+  "homepage": "https://github.com/Mishra-Vipul/Camera_Gallery#readme"
+}

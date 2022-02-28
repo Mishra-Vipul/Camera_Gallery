@@ -72,13 +72,11 @@ function deleteListener(e) {
     let id = e.target.parentElement.getAttribute("id");
     let type = id.slice(0,3);
     if(type === "vid"){
-        console.log("yo");
         let videodbTransaction = db.transaction("video","readwrite");
         let videoStore = videodbTransaction.objectStore("video");
         videoStore.delete(id);
     } 
     else if(type === "img"){
-        console.log("yo");
         let imagedbTransaction = db.transaction("image", "readwrite");
         let imageStore = imagedbTransaction.objectStore("image");
         imageStore.delete(id);
